@@ -1,0 +1,61 @@
+#+TITLE: Citations in Org Mode Export for Typst
+:drawer:
+#+TYPST: #set document(title: "Citations in Org Mode Export for Typst")
+#+TYPST: #set document(author: "Randy Ridenour")
+#+TYPST: #set page(paper: "us-letter", margin: (x: 1.5in, y: 1.5in))
+#+TYPST: #set text(font: "Libertinus Serif", size: 12pt,)
+#+TYPST: #set heading(numbering: "1.1")
+#+TYPST: #show title: set text(font: "Libertinus Serif", size: 20pt, weight: "regular")
+#+TYPST: #show heading: set text(font: "Libertinus Sans", weight: "regular")
+#+TYPST: #show math.equation: set text(font: "Libertinus Math")
+#+TYPST: #show heading: smallcaps
+#+TYPST: #show heading: set block(above: 2em, below: 1em)
+#+OPTIONS: toc:nil
+
+#+BEGIN_EXPORT typst
+#align(center)[
+#title()
+#v(1em)
+#set text(14pt)
+Randy Ridenour
+#v(.05em)
+July 16, 2026]
+#+END_EXPORT
+:end:
+
+These are examples of citation exports using my custom ox-rlr-typst Org mode exporter for Typst. All of the following are using the Chicago Author-Date style.
+
+The default citation, =[cite:@Ridenour2019b]=, prints the author and year in parentheses:
+
+[cite:@Ridenour2019b]
+
+[cite:@Ridenour2019b for more]
+
+To add a page or page-range reference, use =[cite:@Ridenour2019b 7-10]=:
+
+[cite:@Ridenour2019b 7-10]
+
+=[cite/text:@Ridenour2019b]= moves the author name outside the parentheses:
+
+see [cite/text:@Ridenour2019b] for more.
+
+To print the author name only, use =[cite/author:@Ridenour2019b]=:
+
+[cite/author:@Ridenour2019b]
+
+Likewise, for only the year, use =[cite/na/b:@Ridenour2019b]=:
+
+[cite/na/b:@Ridenour2019b]
+
+=[cite/bibentry:@Ridenour2019b]= prints a standard biliography entry:
+
+[cite/bibentry:@Ridenour2019b]
+
+Finally, =[cite/nocite:@Ridenour2019b]= prints nothing, but adds the reference to the bibliography.
+
+[cite/nocite:@Ridenour2019b]
+
+#+TYPST: #bibliography("sources.bib", style: "chicago-author-date")
+
+
+
