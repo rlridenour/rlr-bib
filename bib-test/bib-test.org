@@ -47,7 +47,7 @@ Likewise, for only the year, use =[cite/na/b:@Ridenour2019b]=:
 
 [cite/na/b:@Ridenour2019b]
 
-=[cite/bibentry:@Ridenour2019b]= prints a standard biliography entry:
+=[cite/bibentry:@Ridenour2019b]= prints a standard bibliography entry:
 
 [cite/bibentry:@Ridenour2019b]
 
